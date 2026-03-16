@@ -1,0 +1,15 @@
+[package]
+name = "frutiger-drop-wasm"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Frutiger Drop WASM bindings"
+repository = "https://github.com/frutiger-drop/frutiger-drop"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+frutiger-drop-core = { path = "../../../core" }
+

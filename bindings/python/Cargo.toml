@@ -1,0 +1,16 @@
+[package]
+name = "frutiger-drop-python"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Frutiger Drop Python bindings"
+repository = "https://github.com/frutiger-drop/frutiger-drop"
+
+[lib]
+name = "frutiger_drop_python"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.22", features = ["extension-module"] }
+frutiger-drop-core = { path = "../../core", default-features = false }
+

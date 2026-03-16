@@ -1,0 +1,21 @@
+[package]
+name = "frutiger-drop-core"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Frutiger Drop core image operations (blur, tint, compositing)"
+repository = "https://github.com/frutiger-drop/frutiger-drop"
+
+[lib]
+name = "frutiger_drop_core"
+path = "src/lib.rs"
+crate-type = ["rlib", "cdylib"]
+
+[features]
+default = ["ffi"]
+ffi = []
+
+[dependencies]
+
+[dev-dependencies]
+rand = "0.8"

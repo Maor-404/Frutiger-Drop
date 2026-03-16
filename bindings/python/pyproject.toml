@@ -1,0 +1,28 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "frutiger-drop"
+version = "0.1.0"
+description = "Frutiger Drop Python bindings (pyo3)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Frutiger Drop" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Rust",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/frutiger-drop/frutiger-drop"
+Repository = "https://github.com/frutiger-drop/frutiger-drop"
+
+[tool.maturin]
+module-name = "frutiger_drop._native"
+python-source = "src"
+bindings = "pyo3"
+

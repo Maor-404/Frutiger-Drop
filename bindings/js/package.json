@@ -1,0 +1,24 @@
+{
+  "name": "@frutiger-drop/js",
+  "version": "0.1.0",
+  "description": "Frutiger Drop JavaScript bindings (WASM)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frutiger-drop/frutiger-drop.git"
+  },
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "wasm/pkg"
+  ],
+  "scripts": {
+    "build:wasm": "node ./build.js"
+  },
+  "devDependencies": {}
+}
+
