@@ -1,0 +1,25 @@
+name: .NET
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: dotnet restore
+        working-directory: bindings/dotnet
+        run: dotnet restore
+
+      - name: dotnet build
+        working-directory: bindings/dotnet
+        run: dotnet build -c Release --no-restore
+
